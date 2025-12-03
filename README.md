@@ -79,7 +79,7 @@ Run this to connect your Telegram bot to your App:
 
 To start the App in the background run: 
 
-`bun run app.ts`
+`bun run app.ts &`
 
 This step will also initialize the SQLite database.
 
