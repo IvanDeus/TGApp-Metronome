@@ -73,7 +73,7 @@ Edit .env and add your actual data, like: TELEGRAM_BOT_TOKEN, App URL and local 
 
 Run this to connect your Telegram bot to your App:
 
-`bun run setup_webhook.py`
+`bun run setup_webhook.ts`
 
 ### Step 6: 🏃🏻‍♂️Run Your Metronome Mini App
 
