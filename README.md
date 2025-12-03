@@ -36,15 +36,17 @@ A simple metronome mini app that runs inside **Telegram WebApp** environment usi
 
 ### Step 1: Get the App
 
-Download release file and unpack:
+Download a release file and unpack:
 
-`git clone release-name`
+```
+git clone release-name
+```
 
 ### Step 2: Create Environment & Install Dependencies
 
-Depending on your OS, install Python 3 main package and then run those:
+Depending on your OS, install bun main package:
 ```
-c
+curl -fsSL https://bun.sh/install | bash
 ```
 ### Step 3: 🤖Set Up Your Telegram Bot
 
@@ -58,11 +60,14 @@ c
 
 ### Step 4: Configure App
 
-Copy app_cfg.example.py to app_cfg.py:
+Create your configuration file:
 
-`cp dotenv-example .env`
-
-Edit app_cfg.py and add your actual data, like: TELEGRAM_BOT_TOKEN, Webhook URL, log file and local port for a webhook.
+```
+cd TGApp-Metronome/
+cp dotenv-example .env
+nano .env
+```
+Edit .env and add your actual data, like: TELEGRAM_BOT_TOKEN, App URL and local port for a webhook.
 
 ### Step 5: Set Up Webhook 
 
@@ -90,7 +95,7 @@ server {
     ssl_certificate_key /home/user/cert.key;
 
     location / {
-        proxy_pass http://localhost:6543;
+        proxy_pass http://localhost:5555;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
