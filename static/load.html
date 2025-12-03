@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metronome</title>
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+
+  <div id="loader">Loading...</div>
+
+  <script>
+    // Function to load a script dynamically
+    function loadScript(src, callback, isModule = false) {
+      const script = document.createElement('script');
+      script.src = src;
+      if (isModule) script.type = 'module';
+      script.onload = () => {
+        if (callback) callback();
+      };
+      script.onerror = () => {
+        console.error("Failed to load script:", src);
+        document.getElementById('loader').innerText = "Failed to load resources.";
+      };
+      document.head.appendChild(script);
+    }
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.transition = 'opacity 0.5s ease-out';
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }, 1200);
+    });
+    // Load Telegram SDK first
+    loadScript("https://telegram.org/js/telegram-web-app.js",  () => {
+      // Now load main.js as module
+      loadScript("static/main.js", null, true);
+    });
+  </script>
+<div id="app"></div>
+</body>
+</html>
