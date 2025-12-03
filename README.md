@@ -24,7 +24,7 @@ A simple metronome mini app that runs inside **Telegram WebApp** environment usi
 - bun 1.3.3
 - Telegram account with bot created via BotFather
 
-### ⚙️ Server Setup (for production)
+### ⚙️ Server Setup
 
 - Linux (Ubuntu/RedHat or similar) server
 - Nginx (or grok)
