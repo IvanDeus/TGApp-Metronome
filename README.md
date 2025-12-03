@@ -38,13 +38,13 @@ A simple metronome mini app that runs inside **Telegram WebApp** environment usi
 
 Download release file and unpack:
 
-`tar -xzf release-name.tar.gz`
+`git clone release-name`
 
 ### Step 2: Create Environment & Install Dependencies
 
 Depending on your OS, install Python 3 main package and then run those:
 ```
-bun run app.ts
+c
 ```
 ### Step 3: 🤖Set Up Your Telegram Bot
 
@@ -60,7 +60,7 @@ bun run app.ts
 
 Copy app_cfg.example.py to app_cfg.py:
 
-`cp app_cfg.example.py app_cfg.py`
+`cp dotenv-example .env`
 
 Edit app_cfg.py and add your actual data, like: TELEGRAM_BOT_TOKEN, Webhook URL, log file and local port for a webhook.
 
@@ -68,13 +68,13 @@ Edit app_cfg.py and add your actual data, like: TELEGRAM_BOT_TOKEN, Webhook URL,
 
 Run this to connect your Telegram bot to your App:
 
-`python setup_webhook.py`
+`bun run setup_webhook.py`
 
 ### Step 6: 🏃🏻‍♂️Run Your Metronome Mini App
 
 To start the App in the background run: 
 
-`python run-my-app.py start`
+`bun run app.ts`
 
 This step will also initialize the SQLite database.
 
@@ -104,4 +104,4 @@ You can get SSL Certificate from Certbot/acme.sh "Let's Encrypt" or any other pr
 Go to your Telegram bot and run the App!
 
 
-2025 [ivan deus]
+2025 [ ivan deus ]
