@@ -36,7 +36,7 @@ A simple metronome mini app that runs inside **Telegram WebApp** environment usi
 
 ### Step 1: Get the App
 
-Download a release file and unpack:
+Download release files:
 
 ```
 git clone release-name
