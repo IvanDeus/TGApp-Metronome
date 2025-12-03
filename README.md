@@ -73,13 +73,17 @@ Edit .env and add your actual data, like: TELEGRAM_BOT_TOKEN, App URL and local 
 
 Run this to connect your Telegram bot to your App:
 
-`bun run setup_webhook.ts`
+```
+bun run setup_webhook.ts
+```
 
 ### Step 6: 🏃🏻‍♂️Run Your Metronome Mini App
 
 To start the App in the background run: 
 
-`bun run app.ts &`
+```
+bun run app.ts &
+```
 
 This step will also initialize the SQLite database.
 
